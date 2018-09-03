@@ -9,11 +9,6 @@ RPCPORT=`jq -r '.RPC_PORT' eth_config/config.json`
 PORT=`jq -r '.PORT' eth_config/config.json`
 IP=`jq -r '.IP' eth_config/config.json`
 
-UNLOCK_ACCOUNTS=""
-while IFS= read -r line
-do
-    UNLOCK_ACCOUNTS="$UNLOCK_ACCOUNTS $line "
-done <"$ACCOUNTS"
 
 
 if [ -z "$1" ]
@@ -79,6 +74,12 @@ fi
 ## make genesis block and start node
 if [ $1 == '--node' ]
 then
+    UNLOCK_ACCOUNTS=""
+    while IFS= read -r line
+    do
+        UNLOCK_ACCOUNTS="$UNLOCK_ACCOUNTS $line "
+    done <"$ACCOUNTS"
+
     if [ $2 == '--no-bootnode' ]
     then
         #execute geth node
