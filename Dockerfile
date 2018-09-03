@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+ARG username=jwpyo
+ENV username=${username}
 
 LABEL version="1.0"
 LABEL maintainer="wjddn1801@snu.ac.kr"
@@ -11,9 +13,9 @@ RUN apt-get update && apt-get install --yes geth && apt-get install --yes vim jq
 
 RUN adduser --disabled-login --gecos "" jwpyo
 
-USER jwpyo
-WORKDIR /home/jwpyo
-COPY eth_config/ /home/jwpyo/eth_config/
-COPY * /home/jwpyo/
+USER $username
+WORKDIR /home/${username}
+COPY eth_config/ /home/${username}/eth_config/
+COPY * /home/${username}/
 
 ENTRYPOINT bash
