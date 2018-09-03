@@ -1,0 +1,11 @@
+{
+    "USER_NAME" : "jwpyo",
+    "DATADIR" : "/home/jwpyo/blockchain/eth_data",
+    "CONFIG" : "/home/jwpyo/blockchain/eth_config",
+    "GENESIS_JSON" : "/home/jwpyo/blockchain/eth_config/genesis/genesis_poa.json",
+    "PASSWORD" : "/home/jwpyo/blockchain/eth_config/password.txt",
+    "ACCOUNTS" : "/home/jwpyo/blockchain/eth_config/accounts.txt",
+    "IP" : "147.47.206.14",
+    "RPC_PORT" : 8546,
+    "PORT" : 30333
+}
