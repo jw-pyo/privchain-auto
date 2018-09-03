@@ -14,5 +14,6 @@ RUN adduser --disabled-login --gecos "" jwpyo
 USER jwpyo
 WORKDIR /home/jwpyo
 COPY eth_config/ /home/jwpyo/eth_config/
+COPY * /home/jwpyo/
 
 ENTRYPOINT bash

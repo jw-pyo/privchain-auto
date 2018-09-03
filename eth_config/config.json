@@ -1,6 +1,7 @@
 {
     "USER_NAME" : "jwpyo",
     "DATADIR" : "/home/jwpyo/blockchain/eth_data",
+    "KEYSTORE" : "/home/jwpyo/blockchain/eth_data/keystore",
     "CONFIG" : "/home/jwpyo/blockchain/eth_config",
     "GENESIS_JSON" : "/home/jwpyo/blockchain/eth_config/genesis/genesis_poa.json",
     "PASSWORD" : "/home/jwpyo/blockchain/eth_config/password.txt",
